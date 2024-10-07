@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import './App.css'
-import Product from "./product/Product.jsx";
+import Navbar from "./navigation/Navbar.jsx";
 
 function App() {
     const [products, setProducts] = useState([])
@@ -29,20 +29,10 @@ function App() {
     }
   return (
       <div>
-          <h1>Product List</h1>
-          <div style={productListStyle}>
-              {products.map((product) => (
-                  <Product key={product.id} product={product}/>
-              ))}
-          </div>
+          <Navbar/>
       </div>
   )
 }
 
-const productListStyle = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center'
-};
 
 export default App
